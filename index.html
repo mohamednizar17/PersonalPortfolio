@@ -219,9 +219,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             text-shadow: 0 0 5px var(--glow);
-            
             text-align: center;
-
         }
 
         .section h2::after {
@@ -251,18 +249,15 @@
             text-align: right;
         }
 
-     .gsap-hero-title {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-    gap: 0.25em; /* adds space between flex-wrapped letters */
-    margin-bottom: 1rem;
-}
-
-
-
+        .gsap-hero-title {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            width: 100%;
+            gap: 0.25em;
+            margin-bottom: 1rem;
+        }
 
         .name-letter {
             display: inline-block;
@@ -413,6 +408,75 @@
             background: var(--secondary);
             transform: scale(1.1);
             box-shadow: 0 0 20px var(--glow);
+        }
+
+        /* Project section styles */
+        .projects-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-container {
+            width: 100%;
+            overflow-x: hidden; /* Changed to hidden to prevent scrollbar */
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            padding: 1rem;
+            scroll-snap-type: x mandatory;
+        }
+
+        .project-card {
+            flex: 0 0 auto;
+            width: 300px;
+            scroll-snap-align: center;
+        }
+
+        .project-card.explore-more {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 1.5rem;
+        }
+
+        /* Arrow navigation styles */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: var(--text-accent);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px var(--glow);
+            transition: all 0.3s ease;
+            z-index: 15;
+        }
+
+        .nav-arrow:hover {
+            background: var(--secondary);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .nav-arrow.left {
+            left: -50px;
+        }
+
+        .nav-arrow.right {
+            right: -50px;
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
 
         .chatbot-container {
@@ -685,6 +749,9 @@
             .section-end-card h3 { font-size: 0.9rem; }
             .section-end-card h3 a.btn { padding: 0.3rem 0.6rem; }
             .equation, .quote { font-size: 0.8rem; }
+            .project-card { width: 280px; }
+            .nav-arrow.left { left: 10px; }
+            .nav-arrow.right { right: 10px; }
         }
 
         @media (max-width: 480px) {
@@ -705,6 +772,10 @@
             .section-end-card h3 { font-size: 0.8rem; }
             .section-end-card h3 a.btn { padding: 0.2rem 0.5rem; }
             .equation, .quote { font-size: 0.7rem; }
+            .project-card { width: 250px; }
+            .nav-arrow { width: 35px; height: 35px; font-size: 1rem; }
+            .nav-arrow.left { left: 5px; }
+            .nav-arrow.right { right: 5px; }
         }
     </style>
 </head>
@@ -744,7 +815,6 @@
                 <span class="name-letter"> </span>
                 <span class="name-letter"> </span>
                 <span class="name-letter">N</span><span class="name-letter">i</span><span class="name-letter">z</span><span class="name-letter">a</span><span class="name-letter">r</span>
-
                 <span class="name-letter"> </span>
                 <span class="name-letter">A</span>
                 <span class="name-letter"> </span>
@@ -784,22 +854,33 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="gsap-section-title">Projects</h2>
-            <div class="card gsap-project-card project-card">
-                <h3><a href="https://mohamednizar17.github.io/TrainHealthIndex/" target="_blank">Healthy Train - Real-Time Train Health Dashboard</a></h3>
-                <p>Built a real-time dashboard to monitor railway train health using multi-sensor input streams. Achieved 87% early detection accuracy on anomalies like overheating and excess vibration, reducing risk in pilot tests. Integrated Node.js back-end with THI algorithms and live Plotly.js visualizations for intuitive user experience.</p>
-                <a href="https://mohamednizar17.github.io/TrainHealthIndex/" class="btn" target="_blank">View Live Demo</a>
+            <div class="projects-wrapper">
+                <button class="nav-arrow left" id="projectLeftArrow" aria-label="Previous Project">←</button>
+                <div class="projects-container" id="projectsContainer">
+                    <div class="card gsap-project-card project-card">
+                        <h3><a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" target="_blank">Healthy Train - Real-Time Train Health Dashboard</a></h3>
+                        <p>Built a real-time dashboard to monitor railway train health using multi-sensor input streams. Achieved 87% early detection accuracy on anomalies like overheating and excess vibration, reducing risk in pilot tests. Integrated Node.js back-end with THI algorithms and live Plotly.js visualizations for intuitive user experience.</p>
+                        <a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" class="btn" target="_blank">View Live Demo</a>
+                    </div>
+                    <div class="card gsap-project-card project-card">
+                        <h3><a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" target="_blank">AetheriumAnalyzer</a></h3>
+                        <p>Developed an AI-powered web tool for script analysis, scoring scripts (0-100) and providing suggestions for plot, characters, and dialogue. Features file upload support, a chatbot assistant, and a responsive neon-themed UI.</p>
+                        <a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" class="btn" target="_blank">View Live Demo</a>
+                    </div>
+                    <div class="card gsap-project-card project-card">
+                        <h3><a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" target="_blank">AI-Powered Data Insight Portal</a></h3>
+                        <p>Built a web app for analyzing and visualizing CSV data with AI-driven insights. Offers interactive data preparation and multiple chart types for enhanced user experience.</p>
+                        <a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" class="btn" target="_blank">View Live Demo</a>
+                    </div>
+                    <div class="card gsap-project-card project-card">
+                        <h3><a href="https://mohamednizar17.github.io/MindAidPro/" target="_blank">MindAidPro</a></h3>
+                        <p>Developed an AI-driven mental health chatbot leveraging NLP models to deliver personalized coping strategies and resource recommendations. Integrated sentiment analysis with a responsive Streamlit interface, achieving 85% user satisfaction in beta testing.</p>
+                        <a href="https://mohamednizar17.github.io/MindAidPro/" class="btn" target="_blank">View Live Demo</a>
+                    </div>
+                </div>
+                <button class="nav-arrow right" id="projectRightArrow" aria-label="Next Project">→</button>
             </div>
-            <div class="card gsap-project-card project-card">
-                <h3><a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" target="_blank">AetheriumAnalyzer</a></h3>
-                <p>Developed an AI-powered web tool for script analysis, scoring scripts (0-100) and providing suggestions for plot, characters, and dialogue. Features file upload support, a chatbot assistant, and a responsive neon-themed UI.</p>
-                <a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" class="btn" target="_blank">View Live Demo</a>
-            </div>
-            <div class="card gsap-project-card project-card">
-                <h3><a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" target="_blank">AI-Powered Data Insight Portal</a></h3>
-                <p>Built a web app for analyzing and visualizing CSV data with AI-driven insights. Offers interactive data preparation and multiple chart types for enhanced user experience.</p>
-                <a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" class="btn" target="_blank">View Live Demo</a>
-            </div>
-            <div class="card gsap-project-card project-card">
+            <div class="card gsap-project-card project-card explore-more">
                 <h3>Explore more of my work on <a href="https://github.com/mohamednizar17" class="btn" target="_blank">more</a></h3>
             </div>
         </div>
@@ -918,7 +999,7 @@
             function wrapLetters(text) {
                 return text.split('').map((char, index) => {
                     if (char === ' ') {
-                        return `<span class="hero-letter hero-space" style="--letter-index: ${index}">&nbsp;</span>`;
+                        return `<span class="hero-letter hero-space" style="--letter-index: ${index}"> </span>`;
                     }
                     return `<span class="hero-letter" style="--letter-index: ${index}">${char}</span>`;
                 }).join('');
@@ -962,7 +1043,6 @@
             animatePhrase();
 
             gsap.registerPlugin(ScrollTrigger);
-            
 
             gsap.from('.background-wave', {
                 opacity: 0,
@@ -1010,7 +1090,7 @@
             gsap.utils.toArray('.gsap-project-card').forEach((el, i) => {
                 gsap.from(el, {
                     scrollTrigger: { trigger: el, start: 'top 80%' },
-                    x: i % 2 === 0 ? -200 : 200,
+                    x: 200,
                     opacity: 0,
                     duration: 1.2,
                     delay: i * 0.2,
@@ -1075,6 +1155,56 @@
                 });
             });
 
+            // Arrow navigation for projects
+            const projectsContainer = document.getElementById('projectsContainer');
+            const leftArrow = document.getElementById('projectLeftArrow');
+            const rightArrow = document.getElementById('projectRightArrow');
+            const cardWidth = 300 + 24; // Card width (300px) + gap (1.5rem = 24px)
+            let currentScrollPosition = 0;
+
+            function updateArrowState() {
+                const maxScroll = projectsContainer.scrollWidth - projectsContainer.clientWidth;
+                leftArrow.disabled = currentScrollPosition <= 0;
+                rightArrow.disabled = currentScrollPosition >= maxScroll - 10; // Small buffer
+            }
+
+            leftArrow.addEventListener('click', () => {
+                currentScrollPosition -= cardWidth;
+                if (currentScrollPosition < 0) currentScrollPosition = 0;
+                gsap.to(projectsContainer, {
+                    scrollLeft: currentScrollPosition,
+                    duration: 0.5,
+                    ease: 'power2.out',
+                    onComplete: updateArrowState
+                });
+            });
+
+            rightArrow.addEventListener('click', () => {
+                const maxScroll = projectsContainer.scrollWidth - projectsContainer.clientWidth;
+                currentScrollPosition += cardWidth;
+                if (currentScrollPosition > maxScroll) currentScrollPosition = maxScroll;
+                gsap.to(projectsContainer, {
+                    scrollLeft: currentScrollPosition,
+                    duration: 0.5,
+                    ease: 'power2.out',
+                    onComplete: updateArrowState
+                });
+            });
+
+            // Initialize arrow states on load and resize
+            projectsContainer.addEventListener('scroll', updateArrowState);
+            window.addEventListener('resize', () => {
+                updateArrowState();
+                // Adjust currentScrollPosition if window size changes
+                const maxScroll = projectsContainer.scrollWidth - projectsContainer.clientWidth;
+                if (currentScrollPosition > maxScroll) {
+                    currentScrollPosition = maxScroll;
+                    projectsContainer.scrollLeft = currentScrollPosition;
+                }
+            });
+            updateArrowState();
+
+            // Chatbot functionality
             const chatbot = document.getElementById('chatbot');
             const toggleChatbot = document.getElementById('toggleChatbot');
             const closeChatbot = document.getElementById('closeChatbot');
@@ -1105,55 +1235,87 @@
                 });
             });
 
-            const responses = {
-                'skills': 'Nizar excels in Python, R, Java, C, HTML, CSS, SQL, MySQL, statistical analysis, data visualization, data mining, Power BI, Excel, Streamlit, and Tableau. His soft skills include problem solving, critical thinking, and collaboration.',
-                'projects': 'Nizar’s portfolio features Healthy Train - Real-Time Train Health Dashboard (87% anomaly detection), AetheriumAnalyzer (AI script analysis), and AI-Powered Data Insight Portal (data visualization web app). Check them out in the Projects section!',
-                'experience': 'Nizar served as a Data Analytics Intern at Plasmid Innovations (Jul-Aug 2024), creating impactful Power BI dashboards, and as a Marketing Intern at Skill Vertex (Aug-Sep 2023), enhancing campaign strategies.',
-                'education': 'Nizar is pursuing a B.Tech in AI and Data Science at BSA Crescent Institute (2022-2026, CGPA: 9.3). He achieved 93% in HSC (2022) and 98% in SSLC (2020) at St. Joseph AMHS School, Kallakurichi.',
-                'certifications': 'Nizar holds certifications in Responsive Web Design (freeCodeCamp), Game AI and Reinforcement Learning (Kaggle), Feature Engineering (Kaggle), Foundations of Cybersecurity (Coursera), and Campus Executive (Skill Vertex). View them in the Education section!',
-                'contact': 'You can reach Nizar at arnizz077@gmail.com, +919786083250, or on GitHub at mohamednizar17.',
-                'suitable': 'Nizar is an ideal candidate for roles in AI, data science, and analytics. His technical expertise and hands-on project experience make him a strong fit for innovative, AI-driven positions.',
-                'hire': 'Nizar is a third-year AI and Data Science student with a 9.3 CGPA, skilled in Python, SQL, Power BI, and more. His projects showcase his ability to deliver results, making him a highly hireable candidate for AI and technical roles.',
-                'default': 'Hello! I’m Nizar’s AI Assistant. Ask about his skills, projects, experience, or how he can contribute to your team!'
-            };
+            // Fetch chatbot responses from JSON
+            fetch('chatbot_responses.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load chatbot responses');
+                    return response.json();
+                })
+                .then(data => {
+                    const responses = data;
 
-            function addMessage(text, type) {
-                const message = document.createElement('div');
-                message.classList.add('message', type);
-                message.textContent = text;
-                chatbotBody.appendChild(message);
-                gsap.from(message, { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' });
-                chatbotBody.scrollTop = chatbotBody.scrollHeight;
-            }
+                    function addMessage(text, type) {
+                        const message = document.createElement('div');
+                        message.classList.add('message', type);
+                        message.textContent = text;
+                        chatbotBody.appendChild(message);
+                        gsap.from(message, { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' });
+                        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                    }
 
-            function handleChatInput() {
-                const input = chatInput.value.trim().toLowerCase();
-                if (!input) return;
+                    function handleChatInput() {
+                        const input = chatInput.value.trim().toLowerCase();
+                        if (!input) return;
 
-                addMessage(input, 'user-message');
-                typingIndicator.classList.add('active');
-                setTimeout(() => {
-                    typingIndicator.classList.remove('active');
-                    let response = responses['default'];
-                    if (input.includes('skill')) response = responses['skills'];
-                    else if (input.includes('project')) response = responses['projects'];
-                    else if (input.includes('experience') || input.includes('intern')) response = responses['experience'];
-                    else if (input.includes('education') || input.includes('study')) response = responses['education'];
-                    else if (input.includes('certification')) response = responses['certifications'];
-                    else if (input.includes('contact') || input.includes('email') || input.includes('phone')) response = responses['contact'];
-                    else if (input.includes('suitable') || input.includes('role')) response = responses['suitable'];
-                    else if (input.includes('about nizar') || input.includes('hire')) response = responses['hire'];
-                    addMessage(response, 'bot-message');
-                }, 1000);
-                chatInput.value = '';
-            }
+                        addMessage(input, 'user-message');
+                        typingIndicator.classList.add('active');
 
-            sendMessage.addEventListener('click', handleChatInput);
-            chatInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') handleChatInput();
-            });
+                        setTimeout(() => {
+                            typingIndicator.classList.remove('active');
+                            let selectedResponse = null;
+                            let maxPriority = -1;
 
-            setTimeout(() => addMessage('Hello! Ask about Nizar’s AI projects or skills.', 'bot-message'), 500);
+                            // Find the best matching category based on keywords
+                            for (const key in responses) {
+                                const category = responses[key];
+                                const matched = category.keywords.some(keyword => input.includes(keyword.toLowerCase()));
+                                if (matched) {
+                                    const responseOptions = category.responses;
+                                    const response = responseOptions[Math.floor(Math.random() * responseOptions.length)];
+                                    if (response.priority > maxPriority) {
+                                        selectedResponse = response.text;
+                                        maxPriority = response.priority;
+                                    }
+                                }
+                            }
+
+                            // Fallback to a random default response
+                            if (!selectedResponse) {
+                                const defaultResponses = responses['default'].responses;
+                                selectedResponse = defaultResponses[Math.floor(Math.random() * defaultResponses.length)].text;
+                            }
+
+                            addMessage(selectedResponse, 'bot-message');
+                        }, 1000);
+                        chatInput.value = '';
+                    }
+
+                    sendMessage.addEventListener('click', handleChatInput);
+                    chatInput.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') handleChatInput();
+                    });
+
+                    // Initial greeting
+                    setTimeout(() => {
+                        const greetingResponses = responses['greeting'].responses;
+                        const greeting = greetingResponses[Math.floor(Math.random() * greetingResponses.length)].text;
+                        addMessage(greeting, 'bot-message');
+                    }, 500);
+                })
+                .catch(error => {
+                    console.error('Error loading chatbot responses:', error);
+                    // Fallback to a basic response if JSON fails to load
+                    function addMessage(text, type) {
+                        const message = document.createElement('div');
+                        message.classList.add('message', type);
+                        message.textContent = text;
+                        chatbotBody.appendChild(message);
+                        gsap.from(message, { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' });
+                        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                    }
+
+                    addMessage('Oops, I couldn’t load my responses. Please ask about Nizar’s projects or skills, and I’ll do my best!', 'bot-message');
+                });
         });
     </script>
 </body>
