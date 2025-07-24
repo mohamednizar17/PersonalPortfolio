@@ -65,7 +65,7 @@
         .equation {
             position: absolute;
             font-family: 'Fira Code', monospace;
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0.25;
             color: var(--primary);
             animation: drift 25s infinite linear;
@@ -89,7 +89,7 @@
         .quote {
             position: absolute;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 700;
             opacity: 0.2;
             color: var(--secondary);
@@ -139,15 +139,15 @@
             top: 0;
             width: 100%;
             background: var(--card-bg);
-            padding: 1rem;
+            padding: 0.8rem;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
@@ -155,23 +155,23 @@
             color: var(--text-dark);
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             text-transform: uppercase;
             position: relative;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
             width: 0;
-            height: 3px;
-            bottom: -5px;
+            height: 2px;
+            bottom: -4px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--primary);
-            transition: width 0.4s ease;
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover::after {
@@ -180,7 +180,7 @@
 
         .nav-links a:hover {
             color: var(--primary);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         .nav-links a.active {
@@ -188,14 +188,14 @@
         }
 
         .section {
-            padding: 80px 20px;
+            padding: 60px 15px;
             min-height: 100vh;
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             text-align: center;
             position: relative;
             z-index: 10;
@@ -211,42 +211,40 @@
 
         .section h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: var(--secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             position: relative;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             text-shadow: 0 0 5px var(--glow);
-            text-align: center;
         }
 
         .section h2::after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
+            width: 120px;
+            height: 3px;
             background: linear-gradient(to right, transparent, var(--primary), transparent);
-            transition: width 0.5s ease;
+            transition: width 0.4s ease;
         }
 
         .section:hover h2::after {
-            width: 200px;
+            width: 160px;
         }
 
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 900;
             color: var(--secondary);
             margin-bottom: 0.5rem;
-            text-shadow: 0 0 10px var(--glow);
+            text-shadow: 0 0 8px var(--glow);
             z-index: 12;
-            text-align: right;
         }
 
         .gsap-hero-title {
@@ -255,7 +253,7 @@
             flex-wrap: wrap;
             text-align: center;
             width: 100%;
-            gap: 0.25em;
+            gap: 0.2em;
             margin-bottom: 1rem;
         }
 
@@ -266,8 +264,8 @@
         }
 
         .gsap-hero-title:hover {
-            transform: scale(1.1);
-            text-shadow: 0 0 15px var(--glow);
+            transform: scale(1.05);
+            text-shadow: 0 0 12px var(--glow);
         }
 
         .gsap-hero-title:hover .name-letter {
@@ -294,7 +292,7 @@
 
         .hero h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--text-dark);
             max-width: 600px;
             margin-bottom: 1rem;
@@ -307,24 +305,24 @@
 
         .hero-space {
             display: inline-block;
-            width: 0.25em;
+            width: 0.2em;
         }
 
         .hero .about-text {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-dark);
-            max-width: 800px;
-            margin-bottom: 2rem;
-            line-height: 1.8;
+            max-width: 700px;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
             z-index: 12;
         }
 
         .card {
             background: var(--card-bg);
             border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid var(--primary);
             color: var(--text-dark);
@@ -378,12 +376,12 @@
 
         .project-card h3 a {
             font-family: 'Fira Code', monospace;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
             color: var(--secondary);
             text-decoration: none;
-            transition: color 0.4s ease;
+            transition: color 0.3s ease;
         }
 
         .project-card h3 a:hover {
@@ -392,7 +390,7 @@
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
+            padding: 0.7rem 1.8rem;
             background: var(--primary);
             color: var(--text-accent);
             border-radius: 6px;
@@ -400,17 +398,16 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             text-transform: uppercase;
-            transition: all 0.4s ease;
-            box-shadow: 0 0 10px var(--glow);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px var(--glow);
         }
 
         .btn:hover {
             background: var(--secondary);
-            transform: scale(1.1);
-            box-shadow: 0 0 20px var(--glow);
+            transform: scale(1.05);
+            box-shadow: 0 0 12px var(--glow);
         }
 
-        /* Project section styles */
         .projects-wrapper {
             position: relative;
             width: 100%;
@@ -420,12 +417,14 @@
 
         .projects-container {
             width: 100%;
-            overflow-x: hidden; /* Changed to hidden to prevent scrollbar */
+            overflow-x: auto;
             display: flex;
             flex-direction: row;
             gap: 1.5rem;
             padding: 1rem;
             scroll-snap-type: x mandatory;
+            justify-content: flex-start;
+            -webkit-overflow-scrolling: touch;
         }
 
         .project-card {
@@ -440,7 +439,6 @@
             margin-top: 1.5rem;
         }
 
-        /* Arrow navigation styles */
         .nav-arrow {
             position: absolute;
             top: 50%;
@@ -481,17 +479,17 @@
 
         .chatbot-container {
             position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 360px;
+            bottom: 80px;
+            right: 15px;
+            width: 320px;
             background: var(--card-bg);
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
             display: none;
             flex-direction: column;
             z-index: 1000;
             border: 1px solid var(--primary);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
         .chatbot-container.active {
@@ -503,14 +501,14 @@
         .chatbot-header {
             background: var(--primary);
             color: var(--text-accent);
-            padding: 1rem;
-            border-radius: 10px 10px 0 0;
+            padding: 0.8rem;
+            border-radius: 8px 8px 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            transition: background 0.4s ease;
+            font-size: 0.9rem;
         }
 
         .chatbot-header:hover {
@@ -518,43 +516,44 @@
         }
 
         .chatbot-body {
-            max-height: 300px;
+            max-height: 280px;
             overflow-y: auto;
-            padding: 1rem;
+            padding: 0.8rem;
             background: #f3f4f6;
         }
 
         .chatbot-input {
-            padding: 1rem;
+            padding: 0.8rem;
             display: flex;
             border-top: 1px solid var(--text-dark);
         }
 
         .chatbot-input input {
             flex: 1;
-            padding: 0.7rem;
+            padding: 0.6rem;
             border: 1px solid var(--text-dark);
-            border-radius: 6px;
+            border-radius: 5px;
             background: var(--card-bg);
             color: var(--text-dark);
-            transition: border-color 0.4s ease, transform 0.3s ease;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
         }
 
         .chatbot-input input:focus {
             outline: none;
             border-color: var(--primary);
-            transform: scale(1.02);
         }
 
         .chatbot-input button {
-            padding: 0.7rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             margin-left: 0.5rem;
             background: var(--primary);
             color: var(--text-accent);
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: all 0.4s ease;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
         .chatbot-input button:hover {
@@ -563,33 +562,34 @@
         }
 
         .message {
-            margin: 0.7rem 0;
-            padding: 0.7rem 1.2rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            margin: 0.6rem 0;
+            padding: 0.6rem 1rem;
+            border-radius: 5px;
+            font-size: 0.85rem;
             max-width: 80%;
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
         .user-message {
             background: var(--primary);
             color: var(--text-accent);
             margin-left: auto;
-            transform: translateX(20px);
+            transform: translateX(15px);
         }
 
         .bot-message {
             background: #e5e7eb;
             color: var(--text-dark);
             margin-right: auto;
-            transform: translateX(-20px);
+            transform: translateX(-15px);
         }
 
         .typing-indicator {
             display: none;
-            padding: 0.7rem;
+            padding: 0.6rem;
             color: var(--text-dark);
             font-style: italic;
+            font-size: 0.85rem;
         }
 
         .typing-indicator.active {
@@ -598,53 +598,52 @@
 
         #toggleChatbot {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 15px;
+            right: 15px;
             background: var(--primary);
             color: var(--text-accent);
             border: none;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 4px 10px var(--glow);
-            transition: all 0.4s ease;
+            box-shadow: 0 4px 8px var(--glow);
+            transition: all 0.3s ease;
             z-index: 1000;
         }
 
         #toggleChatbot:hover {
-            transform: scale(1.2) rotate(360deg);
+            transform: scale(1.1) rotate(360deg);
             background: var(--secondary);
         }
 
         .chatbot-assistance {
             position: fixed;
-            bottom: 80px;
-            right: 20px;
+            bottom: 70px;
+            right: 15px;
             background: var(--primary);
             color: var(--text-accent);
-            padding: 0.4rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             animation: float 3s ease-in-out infinite;
             z-index: 999;
-            box-shadow: 0 0 8px var(--glow);
-            transition: opacity 0.5s ease;
+            box-shadow: 0 0 6px var(--glow);
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
         }
 
         .custom-cursor {
             position: fixed;
-            width: 16px;
-            height: 16px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="#2dd4bf" opacity="0.8"/><circle cx="4" cy="4" r="2" fill="#1e3a8a" opacity="0.5"/><circle cx="12" cy="4" r="2" fill="#1e3a8a" opacity="0.5"/><circle cx="8" cy="12" r="2" fill="#1e3a8a" opacity="0.5"/></svg>') no-repeat center;
+            width: 14px;
+            height: 14px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="#2dd4bf" opacity="0.8"/><circle cx="3.5" cy="3.5" r="1.5" fill="#1e3a8a" opacity="0.5"/><circle cx="10.5" cy="3.5" r="1.5" fill="#1e3a8a" opacity="0.5"/><circle cx="7" cy="10.5" r="1.5" fill="#1e3a8a" opacity="0.5"/></svg>') no-repeat center;
             background-size: cover;
             pointer-events: none;
             transform: translate(-50%, -50%);
@@ -657,14 +656,14 @@
         }
 
         .custom-cursor.hover {
-            transform: translate(-50%, -50%) scale(1.4);
+            transform: translate(-50%, -50%) scale(1.3);
         }
 
         .contact-info p, .contact-info a {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-dark);
-            margin-bottom: 0.7rem;
-            transition: color 0.4s ease;
+            margin-bottom: 0.6rem;
+            transition: color 0.3s ease;
             text-decoration: none;
         }
 
@@ -673,13 +672,13 @@
         }
 
         .skills-content {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .section-end-card {
             position: relative;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
         }
 
         .section-end-card::before {
@@ -688,36 +687,37 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 50%;
+            width: 60%;
             height: 1px;
             background: linear-gradient(to right, transparent, var(--primary), transparent);
         }
 
         .section-end-card h3 {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-family: 'Fira Code', monospace;
             font-weight: 500;
             margin-bottom: 0;
         }
 
         .section-end-card h3 a.btn {
-            padding: 0.4rem 0.8rem;
+            padding: 0.3rem 0.7rem;
+            font-size: 0.85rem;
         }
 
         #backToTop {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 15px;
+            left: 15px;
             background: var(--primary);
             color: var(--text-accent);
             border: none;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 4px 10px var(--glow);
-            transition: all 0.4s ease;
+            box-shadow: 0 4px 8px var(--glow);
+            transition: all 0.3s ease;
             z-index: 1000;
             opacity: 0;
         }
@@ -727,55 +727,64 @@
         }
 
         #backToTop:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             background: var(--secondary);
         }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 3rem; }
-            .hero h3, .hero .about-text { font-size: 1rem; }
-            .nav-links { gap: 0.75rem; }
+            .hero h3 { font-size: 1.2rem; }
+            .hero .about-text { font-size: 1rem; line-height: 1.6; }
+            .nav-links { gap: 0.6rem; }
             .nav-links a { font-size: 1rem; }
-            .chatbot-container { width: 90%; bottom: 80px; right: 10px; }
+            .chatbot-container { width: 90%; bottom: 70px; right: 10px; }
             .section h2 { font-size: 2rem; }
-            .section { padding: 60px 15px; }
-            .card { padding: 1.5rem; max-width: 90%; }
-            .btn { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
+            .section { padding: 50px 12px; }
+            .card { padding: 1.2rem; max-width: 95%; }
+            .btn { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
             .skill-badge { padding: 0.5rem 1rem; font-size: 0.9rem; }
-            .project-card h3 a { font-size: 1.3rem; }
-            .skills-content { margin-bottom: 2rem; }
-            .section-end-card { margin-top: 1.5rem; padding-top: 1rem; }
+            .project-card h3 a { font-size: 1.2rem; }
+            .project-card p { font-size: 0.9rem; }
+            .skills-content { margin-bottom: 1.5rem; }
+            .section-end-card { margin-top: 1rem; padding-top: 0.8rem; }
             .section-end-card::before { width: 70%; }
-            .section-end-card h3 { font-size: 0.9rem; }
+            .section-end-card h3 { font-size: 0.85rem; }
             .section-end-card h3 a.btn { padding: 0.3rem 0.6rem; }
-            .equation, .quote { font-size: 0.8rem; }
+            .equation, .quote { font-size: 0.7rem; }
             .project-card { width: 280px; }
+            .nav-arrow { width: 40px; height: 40px; font-size: 1rem; }
             .nav-arrow.left { left: 10px; }
             .nav-arrow.right { right: 10px; }
+            .projects-container { gap: 0.8rem; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero h3 { font-size: 0.9rem; }
-            .hero .about-text { font-size: 0.85rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero h3 { font-size: 1rem; }
+            .hero .about-text { font-size: 0.9rem; line-height: 1.5; }
             .nav-links a { font-size: 0.9rem; }
             .section h2 { font-size: 1.8rem; }
             .section { padding: 40px 10px; }
-            .card { padding: 1rem; max-width: 95%; }
+            .card { padding: 1rem; max-width: 100%; }
             .btn { padding: 0.5rem 1.2rem; font-size: 0.8rem; }
             .skill-badge { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
             .project-card h3 a { font-size: 1.1rem; }
-            .contact-info p, .contact-info a { font-size: 0.95rem; }
-            .skills-content { margin-bottom: 1.5rem; }
-            .section-end-card { margin-top: 1rem; padding-top: 0.75rem; }
+            .project-card p { font-size: 0.85rem; }
+            .contact-info p, .contact-info a { font-size: 0.9rem; }
+            .skills-content { margin-bottom: 1rem; }
+            .section-end-card { margin-top: 0.8rem; padding-top: 0.6rem; }
             .section-end-card::before { width: 80%; }
             .section-end-card h3 { font-size: 0.8rem; }
             .section-end-card h3 a.btn { padding: 0.2rem 0.5rem; }
-            .equation, .quote { font-size: 0.7rem; }
-            .project-card { width: 250px; }
-            .nav-arrow { width: 35px; height: 35px; font-size: 1rem; }
+            .equation, .quote { font-size: 0.6rem; }
+            .project-card { width: 240px; }
+            .nav-arrow { width: 35px; height: 35px; font-size: 0.9rem; }
             .nav-arrow.left { left: 5px; }
             .nav-arrow.right { right: 5px; }
+            .projects-container { gap: 0.6rem; }
+            .chatbot-container { width: 95%; bottom: 60px; }
+            #toggleChatbot { width: 40px; height: 40px; font-size: 1.2rem; }
+            .chatbot-assistance { font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -792,7 +801,6 @@
         <div class="quote">AI shapes the future.</div>
         <div class="quote">Code your dreams.</div>
         <div class="quote">MERN.</div>
-        
         <div class="wavy-line"></div>
         <div class="wavy-line"></div>
         <div class="wavy-line"></div>
@@ -833,6 +841,14 @@
             <h2 class="gsap-section-title">Technical Skills</h2>
             <div class="skills-content">
                 <div class="skills-grid">
+                    <div class="skill-badge gsap-skill">MongoDB</div>
+                    <div class="skill-badge gsap-skill">Express.js</div>
+                    
+                    
+                    <div class="skill-badge gsap-skill">React.js</div>
+                    <div class="skill-badge gsap-skill">Node.js</div>
+                    
+                    
                     <div class="skill-badge gsap-skill">Python, R</div>
                     <div class="skill-badge gsap-skill">Java</div>
                     <div class="skill-badge gsap-skill">HTML, CSS, JS</div>
@@ -864,17 +880,16 @@
                         <p>Built a real-time dashboard to monitor railway train health using multi-sensor input streams. Achieved 87% early detection accuracy on anomalies like overheating and excess vibration, reducing risk in pilot tests. Integrated Node.js back-end with THI algorithms and live Plotly.js visualizations for intuitive user experience.</p>
                         <a href="https://mohamednizar17.github.io/TrainHealthIndex/" class="btn" target="_blank">View Live Demo</a>
                     </div>
-                   
+                    
                     <div class="card gsap-project-card project-card">
                         <h3><a href="https://civicfix-frontend-pearl.vercel.app/" target="_blank">CivicFix</a></h3>
                         <p>CivicFix is a full-stack web application built using the MERN stack that empowers citizens to report public issues like potholes, water leaks, and sanitation problems. It features user authentication, issue reporting with image uploads, and an admin dashboard for managing reports. The application is designed to enhance civic engagement and improve community infrastructure.</p>
-
-                        <a href="https://mohamednizar17.github.io/MindAidPro/" class="btn" target="_blank">View Live Demo</a>
+                        <a href="https://civicfix-frontend-pearl.vercel.app/" class="btn" target="_blank">View Live Demo</a>
                     </div>
                     <div class="card gsap-project-card project-card">
                         <h3><a href="https://creative-spark-alpha.vercel.app/" target="_blank">Creative Spark</a></h3>
                         <p>Creativity Spark Studio is a web application designed to unleash creativity through playful AI tools and quirky challenges. Users can log in, register, and interact with various features that provide feedback on their creative works.</p>
-                        <a href="https://mohamednizar17.github.io/MindAidPro/" class="btn" target="_blank">View Live Demo</a>
+                        <a href="https://creative-spark-alpha.vercel.app/" class="btn" target="_blank">View Live Demo</a>
                     </div>
                     <div class="card gsap-project-card project-card">
                         <h3><a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" target="_blank">AI-Powered Data Insight Portal</a></h3>
@@ -882,18 +897,16 @@
                         <a href="https://mohamednizar17.github.io/AI-Powered_data_insight_portal/" class="btn" target="_blank">View Live Demo</a>
                     </div>
                     <div class="card gsap-project-card project-card">
-                        
                         <h3><a href="https://mohamednizar17.github.io/MindAidPro/" target="_blank">MindAidPro</a></h3>
                         <p>Developed an AI-driven mental health chatbot leveraging NLP models to deliver personalized coping strategies and resource recommendations. Integrated sentiment analysis with a responsive Streamlit interface, achieving 85% user satisfaction in beta testing.</p>
                         <a href="https://mohamednizar17.github.io/MindAidPro/" class="btn" target="_blank">View Live Demo</a>
                     </div>
-                     <div class="card gsap-project-card project-card">
+                    
+                    <div class="card gsap-project-card project-card">
                         <h3><a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" target="_blank">AetheriumAnalyzer</a></h3>
                         <p>Developed an AI-powered web tool for script analysis, scoring scripts (0-100) and providing suggestions for plot, characters, and dialogue. Features file upload support, a chatbot assistant, and a responsive neon-themed UI.</p>
                         <a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" class="btn" target="_blank">View Live Demo</a>
                     </div>
-                    
-                    
                 </div>
                 <button class="nav-arrow right" id="projectRightArrow" aria-label="Next Project">→</button>
             </div>
@@ -907,12 +920,17 @@
         <div class="container">
             <h2 class="gsap-section-title">Professional Experience</h2>
             <div class="card gsap-experience-card">
-                <h3 style="font-weight: 600; font-size: 1.125rem; margin-bottom: 0.25rem;">Data Analytics Intern - Plasmid Innovations</h3>
+                <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem;">AI & Computer Vision Intern - Trivy technologies</h3>
+                <p class="text-sm mb-2">Jun 2025 - Jul 2025</p>
+                <p>Developed real-time AI solutions for fight and violence detection, unauthorized entry detection, and facial emotion recognition. Implemented computer vision models to enhance security and monitoring systems.</p>
+            </div>
+            <div class="card gsap-experience-card">
+                <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem;">Data Analytics Intern - Plasmid Innovations</h3>
                 <p class="text-sm mb-2">Jul 2024 - Aug 2024</p>
                 <p>Created Power BI dashboards and visual reports to support data-driven decisions. Analyzed datasets to identify key trends and actionable insights.</p>
             </div>
             <div class="card gsap-experience-card">
-                <h3 style="font-weight: 600; font-size: 1.125rem; margin-bottom: 0.25rem;">Marketing Intern - Skill Vertex</h3>
+                <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem;">Marketing Intern - Skill Vertex</h3>
                 <p class="text-sm mb-2">Aug 2023 - Sep 2023</p>
                 <p>Assisted in executing marketing strategies, boosting brand engagement. Conducted market research to enhance campaign targeting.</p>
             </div>
@@ -923,17 +941,17 @@
         <div class="container">
             <h2 class="gsap-section-title">Education</h2>
             <div class="card gsap-education-card">
-                <h3 style="font-weight: 600; font-size: 1.125rem; margin-bottom: 0.25rem;">B.Tech in Artificial Intelligence and Data Science</h3>
+                <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem;">B.Tech in Artificial Intelligence and Data Science</h3>
                 <p>BSA Crescent Institute of Science and Technology, Chennai</p>
-                <p class="text-sm">2022 - 2026 | CGPA: 9.4</p>
+                <p class="text-sm">2022 - Present | CGPA: 9.4</p>
             </div>
             <div class="card gsap-education-card">
-                <h3 style="font-weight: 600; font-size: 1.125rem; margin-bottom: 0.25rem;">Higher Secondary Certificate (HSC)</h3>
+                <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem;">Higher Secondary Certificate (HSC)</h3>
                 <p>St. Joseph AMHS School, Kallakurichi</p>
                 <p class="text-sm">93% | 2022</p>
             </div>
             <div class="card gsap-education-card">
-                <h3 style="font-weight: 600; font-size: 1.125rem; margin-bottom: 0.25rem;">Secondary School Leaving Certificate (SSLC)</h3>
+                <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem;">Secondary School Leaving Certificate (SSLC)</h3>
                 <p>St. Joseph AMHS School, Kallakurichi</p>
                 <p class="text-sm">98% | 2020</p>
             </div>
@@ -1005,10 +1023,10 @@
 
             const heroText = document.getElementById('hero-text');
             const phrases = [
-                "AI Innovator Crafting Data-Driven Futures",
-                "Building Tomorrow’s AI Solutions",
+                "AI Innovator & MERN Stack Developer",
+                "Building Tomorrow’s AI & Web Solutions",
                 "Transforming Data into Insights",
-                "Pioneering AI for a Better Future"
+                "Pioneering AI & MERN for a Better Future"
             ];
 
             let currentPhraseIndex = 0;
@@ -1068,29 +1086,29 @@
                 ease: 'power4.out'
             });
             gsap.from('.gsap-hero-title', {
-                x: -200,
+                x: -150,
                 letterSpacing: '0px',
                 opacity: 0,
-                duration: 1.5,
+                duration: 1.2,
                 ease: 'power4.out',
                 delay: 0.5,
                 onUpdate: function() {
-                    this.targets()[0].style.textShadow = `0 0 ${20 * this.ratio}px var(--glow)`;
+                    this.targets()[0].style.textShadow = `0 0 ${15 * this.ratio}px var(--glow)`;
                 }
             });
             gsap.from('.about-text', {
-                y: 50,
+                y: 40,
                 opacity: 0,
                 duration: 1,
                 ease: 'power3.out',
-                delay: 1.5
+                delay: 1.2
             });
             gsap.from('.btn', {
                 scale: 0,
                 opacity: 0,
-                duration: 1.5,
-                ease: 'elastic.out(1.5, 0.3)',
-                delay: 2
+                duration: 1.2,
+                ease: 'elastic.out(1.2, 0.3)',
+                delay: 1.8
             });
 
             gsap.utils.toArray('.gsap-skill').forEach((el, i) => {
@@ -1117,30 +1135,21 @@
 
             gsap.utils.toArray('.gsap-experience-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 80%' },
+                    scrollTrigger: { trigger: el, start: 'top 85%' },
                     scale: 0,
                     opacity: 0,
-                    duration: 1,
-                    delay: i * 0.3,
-                    ease: 'back.out(1.7)',
-                    onStart: () => {
-                        gsap.to(el, {
-                            boxShadow: `0 0 30px var(--glow)`,
-                            duration: 1,
-                            repeat: 1,
-                            yoyo: true
-                        });
-                    }
+                    duration: 0.8,
+                    delay: i * 0.2,
+                    ease: 'back.out(1.5)'
                 });
             });
 
             gsap.utils.toArray('.gsap-education-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 80%' },
-                    rotation: 360,
+                    scrollTrigger: { trigger: el, start: 'top 85%' },
                     scale: 0,
                     opacity: 0,
-                    duration: 1.5,
+                    duration: 0.8,
                     delay: i * 0.2,
                     ease: 'power3.out'
                 });
@@ -1148,41 +1157,35 @@
 
             gsap.utils.toArray('.gsap-contact-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 80%' },
-                    y: 100,
+                    scrollTrigger: { trigger: el, start: 'top 85%' },
+                    y: 80,
                     opacity: 0,
-                    duration: 1,
+                    duration: 0.8,
                     delay: i * 0.2,
-                    ease: 'power3.out',
-                    onUpdate: function() {
-                        if (Math.random() > 0.8) {
-                            this.targets()[0].style.transform += `translateX(${Math.random() * 10 - 5}px)`;
-                        }
-                    }
+                    ease: 'power3.out'
                 });
             });
 
             gsap.utils.toArray('.gsap-section-title').forEach(el => {
                 gsap.from(el, {
                     scrollTrigger: { trigger: el, start: 'top 85%' },
-                    x: -60,
+                    x: -50,
                     opacity: 0,
-                    duration: 1,
+                    duration: 0.8,
                     ease: 'power3.out'
                 });
             });
 
-            // Arrow navigation for projects
             const projectsContainer = document.getElementById('projectsContainer');
             const leftArrow = document.getElementById('projectLeftArrow');
             const rightArrow = document.getElementById('projectRightArrow');
-            const cardWidth = 300 + 24; // Card width (300px) + gap (1.5rem = 24px)
+            const cardWidth = 300 + 24;
             let currentScrollPosition = 0;
 
             function updateArrowState() {
                 const maxScroll = projectsContainer.scrollWidth - projectsContainer.clientWidth;
                 leftArrow.disabled = currentScrollPosition <= 0;
-                rightArrow.disabled = currentScrollPosition >= maxScroll - 10; // Small buffer
+                rightArrow.disabled = currentScrollPosition >= maxScroll - 10;
             }
 
             leftArrow.addEventListener('click', () => {
@@ -1208,11 +1211,9 @@
                 });
             });
 
-            // Initialize arrow states on load and resize
             projectsContainer.addEventListener('scroll', updateArrowState);
             window.addEventListener('resize', () => {
                 updateArrowState();
-                // Adjust currentScrollPosition if window size changes
                 const maxScroll = projectsContainer.scrollWidth - projectsContainer.clientWidth;
                 if (currentScrollPosition > maxScroll) {
                     currentScrollPosition = maxScroll;
@@ -1221,7 +1222,6 @@
             });
             updateArrowState();
 
-            // Chatbot functionality
             const chatbot = document.getElementById('chatbot');
             const toggleChatbot = document.getElementById('toggleChatbot');
             const closeChatbot = document.getElementById('closeChatbot');
@@ -1235,13 +1235,13 @@
                 toggleChatbot.style.display = chatbot.classList.contains('active') ? 'none' : 'block';
                 if (chatbot.classList.contains('active')) {
                     chatInput.focus();
-                    gsap.fromTo(chatbot, { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' });
+                    gsap.fromTo(chatbot, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' });
                 }
             });
 
             closeChatbot.addEventListener('click', () => {
                 gsap.to(chatbot, {
-                    y: 60,
+                    y: 50,
                     opacity: 0,
                     duration: 0.5,
                     ease: 'power3.in',
@@ -1252,7 +1252,6 @@
                 });
             });
 
-            // Fetch chatbot responses from JSON
             fetch('chatbot_responses.json')
                 .then(response => {
                     if (!response.ok) throw new Error('Failed to load chatbot responses');
@@ -1266,7 +1265,7 @@
                         message.classList.add('message', type);
                         message.textContent = text;
                         chatbotBody.appendChild(message);
-                        gsap.from(message, { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' });
+                        gsap.from(message, { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' });
                         chatbotBody.scrollTop = chatbotBody.scrollHeight;
                     }
 
@@ -1282,7 +1281,6 @@
                             let selectedResponse = null;
                             let maxPriority = -1;
 
-                            // Find the best matching category based on keywords
                             for (const key in responses) {
                                 const category = responses[key];
                                 const matched = category.keywords.some(keyword => input.includes(keyword.toLowerCase()));
@@ -1296,7 +1294,6 @@
                                 }
                             }
 
-                            // Fallback to a random default response
                             if (!selectedResponse) {
                                 const defaultResponses = responses['default'].responses;
                                 selectedResponse = defaultResponses[Math.floor(Math.random() * defaultResponses.length)].text;
@@ -1312,7 +1309,6 @@
                         if (e.key === 'Enter') handleChatInput();
                     });
 
-                    // Initial greeting
                     setTimeout(() => {
                         const greetingResponses = responses['greeting'].responses;
                         const greeting = greetingResponses[Math.floor(Math.random() * greetingResponses.length)].text;
@@ -1321,13 +1317,12 @@
                 })
                 .catch(error => {
                     console.error('Error loading chatbot responses:', error);
-                    // Fallback to a basic response if JSON fails to load
                     function addMessage(text, type) {
                         const message = document.createElement('div');
                         message.classList.add('message', type);
                         message.textContent = text;
                         chatbotBody.appendChild(message);
-                        gsap.from(message, { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' });
+                        gsap.from(message, { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' });
                         chatbotBody.scrollTop = chatbotBody.scrollHeight;
                     }
 
