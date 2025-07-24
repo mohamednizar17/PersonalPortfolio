@@ -10,11 +10,11 @@
         ],
         "responses": [
             {
-                "text": "Hi there! I'm Nizar’s AI Assistant, ready to answer questions about his AI, data science, and MERN stack projects, skills, or career journey!",
+                "text": "Hi there! I'm Nizar’s AI Assistant, here to share details about his AI, MERN stack projects, skills, or professional journey!",
                 "priority": 1
             },
             {
-                "text": "Hello! Welcome to Nizar’s portfolio. Ask me about his AI-driven projects, MERN stack apps, or professional experience!",
+                "text": "Hello! Welcome to Nizar’s portfolio. Ask me about his AI-driven solutions, MERN stack applications, or career experiences!",
                 "priority": 1
             }
         ]
@@ -33,11 +33,11 @@
         ],
         "responses": [
             {
-                "text": "Nizar excels in Python, R, Java, HTML, CSS, JavaScript, MySQL, MongoDB, and Streamlit. He’s skilled in statistical analysis, data visualization, data mining, Power BI, Tableau, and MERN stack development, with strong problem-solving and collaboration abilities.",
+                "text": "Nizar is proficient in MongoDB, Express.js, React.js, Node.js (MERN stack), Python, R, Java, HTML, CSS, JavaScript, MySQL, MongoDB, Statistical Analysis, Data Visualization, Data Mining, Power BI, Tableau, Excel, Streamlit, and Game Theory. He excels in critical thinking and collaborative working.",
                 "priority": 1
             },
             {
-                "text": "Nizar’s toolkit includes programming (Python, R, Java), web development (HTML, CSS, JavaScript, MERN stack), databases (MySQL, MongoDB), and analytics (Power BI, Tableau, Streamlit). He’s also proficient in critical thinking and teamwork.",
+                "text": "Nizar’s technical skills include full-stack MERN development, programming (Python, R, Java), web technologies (HTML, CSS, JavaScript), databases (MySQL, MongoDB), and analytics tools (Power BI, Tableau, Streamlit). He’s also strong in statistical modeling and teamwork.",
                 "priority": 1
             }
         ]
@@ -55,11 +55,11 @@
         ],
         "responses": [
             {
-                "text": "Nizar’s projects include Healthy Train (real-time train health dashboard), AetheriumAnalyzer (AI script analysis tool), CivicFix (MERN stack civic issue tracker), Creative Spark (AI creativity platform), AI-Powered Data Insight Portal, and MindAidPro (mental health chatbot). Explore them in the Projects section!",
+                "text": "Nizar’s projects include Healthy Train (real-time train health dashboard), CivicFix (MERN stack civic issue tracker), Creative Spark (AI creativity platform), AI-Powered Data Insight Portal, MindAidPro (mental health chatbot), and AetheriumAnalyzer (AI script analysis tool). Check them out in the Projects section!",
                 "priority": 1
             },
             {
-                "text": "Nizar has developed projects like Healthy Train, AetheriumAnalyzer, CivicFix, Creative Spark, AI-Powered Data Insight Portal, and MindAidPro, showcasing his expertise in AI and MERN stack development. Want details on any specific project?",
+                "text": "Nizar has built innovative projects like Healthy Train, CivicFix, Creative Spark, AI-Powered Data Insight Portal, MindAidPro, and AetheriumAnalyzer, showcasing his AI and MERN stack expertise. Want details on a specific one?",
                 "priority": 1
             }
         ]
@@ -74,21 +74,7 @@
         ],
         "responses": [
             {
-                "text": "Healthy Train is a real-time dashboard monitoring railway train health using multi-sensor inputs. It achieves 87% anomaly detection accuracy for issues like overheating and vibration, using Node.js and Plotly.js for live visualizations.",
-                "priority": 2
-            }
-        ]
-    },
-    "project_aetherium": {
-        "category": "technical",
-        "keywords": [
-            "aetheriumanalyzer",
-            "script analysis",
-            "aetherium"
-        ],
-        "responses": [
-            {
-                "text": "AetheriumAnalyzer is an AI-powered web tool for script analysis, scoring scripts (0-100) and suggesting improvements for plot, characters, and dialogue. It features file upload support and a responsive neon-themed UI.",
+                "text": "Healthy Train is a real-time dashboard monitoring railway train health using multi-sensor input streams. It achieves 87% early detection accuracy on anomalies like overheating and excess vibration, using Node.js and Plotly.js for live visualizations. View it at https://mohamednizar17.github.io/TrainHealthIndex/.",
                 "priority": 2
             }
         ]
@@ -103,7 +89,7 @@
         ],
         "responses": [
             {
-                "text": "CivicFix is a full-stack MERN web application enabling citizens to report public issues like potholes and water leaks. It includes user authentication, image uploads, and an admin dashboard to enhance civic engagement.",
+                "text": "CivicFix is a full-stack MERN web application empowering citizens to report public issues like potholes and water leaks. It features user authentication, image uploads, and an admin dashboard for managing reports. View it at https://civicfix-frontend-pearl.vercel.app/.",
                 "priority": 2
             }
         ]
@@ -118,7 +104,7 @@
         ],
         "responses": [
             {
-                "text": "Creative Spark is a MERN stack web app designed to boost creativity with AI-driven tools and challenges. It offers user login, registration, and feedback features for creative works.",
+                "text": "Creative Spark is a MERN stack web application designed to unleash creativity through playful AI tools and challenges. It offers user login, registration, and feedback features for creative works. View it at https://creative-spark-alpha.vercel.app/.",
                 "priority": 2
             }
         ]
@@ -133,7 +119,7 @@
         ],
         "responses": [
             {
-                "text": "The AI-Powered Data Insight Portal is a web app for analyzing and visualizing CSV data with AI-driven insights, offering interactive data preparation and multiple chart types for enhanced user experience.",
+                "text": "AI-Powered Data Insight Portal is a web app for analyzing and visualizing CSV data with AI-driven insights, offering interactive data preparation and multiple chart types. View it at https://mohamednizar17.github.io/AI-Powered_data_insight_portal/.",
                 "priority": 2
             }
         ]
@@ -148,7 +134,21 @@
         ],
         "responses": [
             {
-                "text": "MindAidPro is an AI-driven mental health chatbot using NLP models to provide personalized coping strategies and resource recommendations. Built with a Streamlit interface, it achieved 85% user satisfaction in beta testing.",
+                "text": "MindAidPro is an AI-driven mental health chatbot using NLP models to provide personalized coping strategies and resource recommendations. Built with Streamlit, it achieved 85% user satisfaction in beta testing. View it at https://mohamednizar17.github.io/MindAidPro/.",
+                "priority": 2
+            }
+        ]
+    },
+    "project_aetherium": {
+        "category": "technical",
+        "keywords": [
+            "aetheriumanalyzer",
+            "script analysis",
+            "aetherium"
+        ],
+        "responses": [
+            {
+                "text": "AetheriumAnalyzer is an AI-powered web tool for script analysis, scoring scripts (0-100) and suggesting improvements for plot, characters, and dialogue. It features file upload support and a neon-themed UI. View it at https://mohamednizar17.github.io/AetheriumAnalyzer/.",
                 "priority": 2
             }
         ]
@@ -165,11 +165,11 @@
         ],
         "responses": [
             {
-                "text": "Nizar interned as an AI & Computer Vision Intern at Trivy Technologies, developing real-time fight detection, unauthorized entry detection, and facial emotion recognition systems. He also worked as a Data Analytics Intern at Plasmid Innovations (Jul-Aug 2024) and a Marketing Intern at Skill Vertex (Aug-Sep 2023).",
+                "text": "Nizar interned as an AI & Computer Vision Intern at Trivy Technologies (Jun 2025 - Jul 2025), developing real-time AI systems. He also worked as a Data Analytics Intern at Plasmid Innovations (Jul 2024 - Aug 2024) and a Marketing Intern at Skill Vertex (Aug 2023 - Sep 2023).",
                 "priority": 1
             },
             {
-                "text": "Nizar’s experience includes an AI & Computer Vision Internship at Trivy Technologies, a Data Analytics Internship at Plasmid Innovations, and a Marketing Internship at Skill Vertex, showcasing his skills in AI, analytics, and strategy.",
+                "text": "Nizar’s professional experience includes internships at Trivy Technologies (AI & Computer Vision), Plasmid Innovations (Data Analytics), and Skill Vertex (Marketing), showcasing his versatility in AI, analytics, and strategy.",
                 "priority": 1
             }
         ]
@@ -186,7 +186,36 @@
         ],
         "responses": [
             {
-                "text": "At Trivy Technologies, Nizar developed real-time AI solutions for fight and violence detection, unauthorized entry detection, and facial emotion recognition, enhancing security and monitoring systems with computer vision models.",
+                "text": "At Trivy Technologies (Jun 2025 - Jul 2025), Nizar developed real-time AI solutions for fight and violence detection, unauthorized entry detection, and facial emotion recognition, enhancing security systems with computer vision models.",
+                "priority": 2
+            }
+        ]
+    },
+    "plasmid_internship": {
+        "category": "professional",
+        "keywords": [
+            "plasmid",
+            "plasmid innovations",
+            "data analytics",
+            "power bi"
+        ],
+        "responses": [
+            {
+                "text": "As a Data Analytics Intern at Plasmid Innovations (Jul 2024 - Aug 2024), Nizar created Power BI dashboards and visual reports to support data-driven decisions, analyzing datasets for key trends and insights.",
+                "priority": 2
+            }
+        ]
+    },
+    "skill_vertex_internship": {
+        "category": "professional",
+        "keywords": [
+            "skill vertex",
+            "marketing",
+            "campaign"
+        ],
+        "responses": [
+            {
+                "text": "As a Marketing Intern at Skill Vertex (Aug 2023 - Sep 2023), Nizar assisted in executing marketing strategies and conducted market research to enhance campaign targeting, boosting brand engagement.",
                 "priority": 2
             }
         ]
@@ -220,7 +249,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar holds certifications in Responsive Web Design (freeCodeCamp), Game AI and Reinforcement Learning (Kaggle), Feature Engineering (Kaggle), Foundations of Cybersecurity (Coursera), and Campus Executive (Skill Vertex). Check them out in the Education section!",
+                "text": "Nizar has earned multiple certifications in AI, data science, and web development. View them at https://github.com/mohamednizar17/Certificates.",
                 "priority": 1
             }
         ]
@@ -254,7 +283,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar is ideal for AI, data science, and MERN stack development roles, with hands-on experience in real-time computer vision, analytics, and full-stack web applications.",
+                "text": "Nizar is ideal for roles in AI, computer vision, data science, and MERN stack development, with proven expertise in real-time AI systems and full-stack web applications.",
                 "priority": 1
             }
         ]
@@ -270,7 +299,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar, a final-year AI and Data Science student with a 9.4 CGPA, excels in Python, SQL, Power BI, and MERN stack development. His projects and internships at Trivy Technologies and Plasmid Innovations make him a strong candidate for AI and web development roles.",
+                "text": "Nizar, a final-year B.Tech student (CGPA: 9.4), excels in AI, computer vision, and MERN stack development. His projects like CivicFix and internships at Trivy Technologies make him a strong candidate for innovative tech roles.",
                 "priority": 1
             }
         ]
@@ -286,7 +315,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar is passionate about AI, computer vision, and MERN stack development. He enjoys exploring real-time AI applications and solving complex problems in healthcare and transportation.",
+                "text": "Nizar is passionate about AI, computer vision, and MERN stack development. He enjoys building solutions for real-world challenges in transportation, civic infrastructure, and mental health.",
                 "priority": 1
             }
         ]
@@ -302,7 +331,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar aims to advance AI, computer vision, and web development by building scalable solutions for real-world challenges in sectors like security, healthcare, and civic infrastructure.",
+                "text": "Nizar aims to innovate in AI, computer vision, and web development, creating scalable solutions for transportation, civic engagement, and mental health challenges.",
                 "priority": 1
             }
         ]
@@ -318,7 +347,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar uses Python, R, Java, HTML, CSS, JavaScript, MySQL, MongoDB, Power BI, Tableau, Streamlit, and Plotly.js for AI, data analysis, and full-stack MERN development.",
+                "text": "Nizar works with MongoDB, Express.js, React.js, Node.js, Python, R, Java, HTML, CSS, JavaScript, MySQL, MongoDB, Power BI, Tableau, Excel, Streamlit, and Plotly.js for AI, data visualization, and MERN stack development.",
                 "priority": 1
             }
         ]
@@ -335,7 +364,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar’s AI expertise spans NLP, machine learning, computer vision, and statistical modeling. Projects like MindAidPro, AetheriumAnalyzer, and his Trivy Technologies internship highlight his real-world AI applications.",
+                "text": "Nizar’s AI expertise includes NLP, machine learning, computer vision, and statistical modeling. Projects like MindAidPro, AetheriumAnalyzer, and his Trivy Technologies internship showcase his real-world AI applications.",
                 "priority": 1
             }
         ]
@@ -351,7 +380,7 @@
         ],
         "responses": [
             {
-                "text": "Nizar, a final-year student, is open to internships and projects in AI, computer vision, and MERN stack development. Reach him at arnizz077@gmail.com for opportunities!",
+                "text": "Nizar, a final-year student, is open to internships and projects in AI, computer vision, and MERN stack development. Contact him at arnizz077@gmail.com for opportunities!",
                 "priority": 1
             }
         ]
@@ -369,7 +398,7 @@
                 "priority": 0
             },
             {
-                "text": "Oops, I might’ve missed something. Ask me about Nizar’s experience, education, or specific projects like CivicFix or Creative Spark!",
+                "text": "Oops, I might’ve missed something. Ask me about Nizar’s experience, education, or projects like CivicFix or Creative Spark!",
                 "priority": 0
             }
         ]
