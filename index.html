@@ -190,7 +190,7 @@
         .section {
             padding: 60px 15px;
             min-height: 100vh;
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -199,6 +199,7 @@
             text-align: center;
             position: relative;
             z-index: 10;
+            overflow-x: hidden;
         }
 
         .container {
@@ -207,6 +208,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            max-width: 100%;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
         }
 
         .section h2 {
@@ -345,6 +350,8 @@
             max-width: 800px;
             justify-items: center;
             perspective: 1000px;
+            padding: 0 10px;
+            overflow-x: visible;
         }
 
         .skill-badge {
@@ -421,7 +428,7 @@
             display: flex;
             flex-direction: row;
             gap: 1.5rem;
-            padding: 1rem;
+            padding: 1rem 10px;
             scroll-snap-type: x mandatory;
             justify-content: flex-start;
             -webkit-overflow-scrolling: touch;
@@ -465,11 +472,11 @@
         }
 
         .nav-arrow.left {
-            left: -50px;
+            left: 5px;
         }
 
         .nav-arrow.right {
-            right: -50px;
+            right: 5px;
         }
 
         .nav-arrow:disabled {
@@ -479,8 +486,8 @@
 
         .chatbot-container {
             position: fixed;
-            bottom: 80px;
-            right: 15px;
+            bottom: 60px;
+            right: 10px;
             width: 320px;
             background: var(--card-bg);
             border-radius: 8px;
@@ -737,25 +744,89 @@
             .hero .about-text { font-size: 1rem; line-height: 1.6; }
             .nav-links { gap: 0.6rem; }
             .nav-links a { font-size: 1rem; }
-            .chatbot-container { width: 90%; bottom: 70px; right: 10px; }
-            .section h2 { font-size: 2rem; }
-            .section { padding: 50px 12px; }
-            .card { padding: 1.2rem; max-width: 95%; }
-            .btn { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
-            .skill-badge { padding: 0.5rem 1rem; font-size: 0.9rem; }
-            .project-card h3 a { font-size: 1.2rem; }
-            .project-card p { font-size: 0.9rem; }
-            .skills-content { margin-bottom: 1.5rem; }
-            .section-end-card { margin-top: 1rem; padding-top: 0.8rem; }
-            .section-end-card::before { width: 70%; }
-            .section-end-card h3 { font-size: 0.85rem; }
-            .section-end-card h3 a.btn { padding: 0.3rem 0.6rem; }
-            .equation, .quote { font-size: 0.7rem; }
-            .project-card { width: 280px; }
-            .nav-arrow { width: 40px; height: 40px; font-size: 1rem; }
-            .nav-arrow.left { left: 10px; }
-            .nav-arrow.right { right: 10px; }
-            .projects-container { gap: 0.8rem; }
+            .section { 
+                min-height: auto; 
+                padding: 40px 12px; 
+                max-width: 100%;
+            }
+            .container { 
+                max-width: 100%; 
+                padding: 0 8px; 
+            }
+            .card { 
+                padding: 1.2rem; 
+                max-width: 95%; 
+            }
+            .btn { 
+                padding: 0.6rem 1.5rem; 
+                font-size: 0.85rem; 
+            }
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                padding: 0 10px;
+                overflow-x: visible;
+            }
+            .skill-badge { 
+                padding: 0.5rem 0.8rem; 
+                font-size: 0.85rem; 
+            }
+            .project-card { 
+                width: 260px; 
+            }
+            .project-card h3 a { 
+                font-size: 1.2rem; 
+            }
+            .project-card p { 
+                font-size: 0.9rem; 
+            }
+            .projects-container {
+                gap: 1rem;
+                padding: 1rem 10px;
+            }
+            .nav-arrow { 
+                width: 40px; 
+                height: 40px; 
+                font-size: 1rem; 
+            }
+            .nav-arrow.left { 
+                left: 5px; 
+            }
+            .nav-arrow.right { 
+                right: 5px; 
+            }
+            .chatbot-container { 
+                width: 90%; 
+                max-width: 300px; 
+                bottom: 60px; 
+                right: 10px; 
+            }
+            .chatbot-assistance { 
+                bottom: 50px; 
+                right: 10px; 
+                font-size: 0.75rem; 
+            }
+            .contact-info p, .contact-info a { 
+                font-size: 0.95rem; 
+            }
+            .skills-content { 
+                margin-bottom: 1.5rem; 
+            }
+            .section-end-card { 
+                margin-top: 1rem; 
+                padding-top: 0.8rem; 
+            }
+            .section-end-card::before { 
+                width: 70%; 
+            }
+            .section-end-card h3 { 
+                font-size: 0.85rem; 
+            }
+            .section-end-card h3 a.btn { 
+                padding: 0.3rem 0.6rem; 
+            }
+            .equation, .quote { 
+                font-size: 0.7rem; 
+            }
         }
 
         @media (max-width: 480px) {
@@ -763,28 +834,97 @@
             .hero h3 { font-size: 1rem; }
             .hero .about-text { font-size: 0.9rem; line-height: 1.5; }
             .nav-links a { font-size: 0.9rem; }
-            .section h2 { font-size: 1.8rem; }
-            .section { padding: 40px 10px; }
-            .card { padding: 1rem; max-width: 100%; }
-            .btn { padding: 0.5rem 1.2rem; font-size: 0.8rem; }
-            .skill-badge { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
-            .project-card h3 a { font-size: 1.1rem; }
-            .project-card p { font-size: 0.85rem; }
-            .contact-info p, .contact-info a { font-size: 0.9rem; }
-            .skills-content { margin-bottom: 1rem; }
-            .section-end-card { margin-top: 0.8rem; padding-top: 0.6rem; }
-            .section-end-card::before { width: 80%; }
-            .section-end-card h3 { font-size: 0.8rem; }
-            .section-end-card h3 a.btn { padding: 0.2rem 0.5rem; }
-            .equation, .quote { font-size: 0.6rem; }
-            .project-card { width: 240px; }
-            .nav-arrow { width: 35px; height: 35px; font-size: 0.9rem; }
-            .nav-arrow.left { left: 5px; }
-            .nav-arrow.right { right: 5px; }
-            .projects-container { gap: 0.6rem; }
-            .chatbot-container { width: 95%; bottom: 60px; }
-            #toggleChatbot { width: 40px; height: 40px; font-size: 1.2rem; }
-            .chatbot-assistance { font-size: 0.75rem; }
+            .section { 
+                min-height: auto; 
+                padding: 30px 10px; 
+                max-width: 100%; 
+            }
+            .container { 
+                max-width: 100%; 
+                padding: 0 5px; 
+            }
+            .card { 
+                padding: 0.8rem; 
+                max-width: 100%; 
+            }
+            .btn { 
+                padding: 0.5rem 1.2rem; 
+                font-size: 0.8rem; 
+            }
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 0.8rem;
+                padding: 0 5px;
+                overflow-x: visible;
+            }
+            .skill-badge { 
+                padding: 0.4rem 0.6rem; 
+                font-size: 0.8rem; 
+            }
+            .project-card { 
+                width: 220px; 
+            }
+            .project-card h3 a { 
+                font-size: 1.1rem; 
+            }
+            .project-card p { 
+                font-size: 0.85rem; 
+            }
+            .projects-container {
+                gap: 0.8rem;
+                padding: 1rem 5px;
+            }
+            .nav-arrow { 
+                width: 30px; 
+                height: 30px; 
+                font-size: 0.8rem; 
+            }
+            .nav-arrow.left { 
+                left: 2px; 
+            }
+            .nav-arrow.right { 
+                right: 2px; 
+            }
+            .chatbot-container { 
+                width: 95%; 
+                max-width: 280px; 
+                bottom: 50px; 
+                right: 10px; 
+            }
+            .chatbot-assistance { 
+                bottom: 40px; 
+                right: 10px; 
+                font-size: 0.7rem; 
+            }
+            #toggleChatbot { 
+                width: 40px; 
+                height: 40px; 
+                font-size: 1.2rem; 
+                bottom: 10px; 
+                right: 10px; 
+            }
+            .contact-info p, .contact-info a { 
+                font-size: 0.9rem; 
+            }
+            .skills-content { 
+                margin-bottom: 1rem; 
+            }
+            .section-end-card { 
+                margin-top: 0.8rem; 
+                padding-top: 0.6rem; 
+            }
+            .section-end-card::before { 
+                width: 80%; 
+            }
+            .section-end-card h3 { 
+                font-size: 0.8rem; 
+            }
+            .section-end-card h3 a.btn { 
+                padding: 0.2rem 0.5rem; 
+            }
+            .equation, .quote { 
+                font-size: 0.6rem; 
+            }
         }
     </style>
 </head>
@@ -843,12 +983,8 @@
                 <div class="skills-grid">
                     <div class="skill-badge gsap-skill">MongoDB</div>
                     <div class="skill-badge gsap-skill">Express.js</div>
-                    
-                    
                     <div class="skill-badge gsap-skill">React.js</div>
                     <div class="skill-badge gsap-skill">Node.js</div>
-                    
-                    
                     <div class="skill-badge gsap-skill">Python, R</div>
                     <div class="skill-badge gsap-skill">Java</div>
                     <div class="skill-badge gsap-skill">HTML, CSS, JS</div>
@@ -880,7 +1016,6 @@
                         <p>Built a real-time dashboard to monitor railway train health using multi-sensor input streams. Achieved 87% early detection accuracy on anomalies like overheating and excess vibration, reducing risk in pilot tests. Integrated Node.js back-end with THI algorithms and live Plotly.js visualizations for intuitive user experience.</p>
                         <a href="https://mohamednizar17.github.io/TrainHealthIndex/" class="btn" target="_blank">View Live Demo</a>
                     </div>
-                    
                     <div class="card gsap-project-card project-card">
                         <h3><a href="https://civicfix-frontend-pearl.vercel.app/" target="_blank">CivicFix</a></h3>
                         <p>CivicFix is a full-stack web application built using the MERN stack that empowers citizens to report public issues like potholes, water leaks, and sanitation problems. It features user authentication, issue reporting with image uploads, and an admin dashboard for managing reports. The application is designed to enhance civic engagement and improve community infrastructure.</p>
@@ -901,7 +1036,6 @@
                         <p>Developed an AI-driven mental health chatbot leveraging NLP models to deliver personalized coping strategies and resource recommendations. Integrated sentiment analysis with a responsive Streamlit interface, achieving 85% user satisfaction in beta testing.</p>
                         <a href="https://mohamednizar17.github.io/MindAidPro/" class="btn" target="_blank">View Live Demo</a>
                     </div>
-                    
                     <div class="card gsap-project-card project-card">
                         <h3><a href="https://mohamednizar17.github.io/AetheriumAnalyzer/" target="_blank">AetheriumAnalyzer</a></h3>
                         <p>Developed an AI-powered web tool for script analysis, scoring scripts (0-100) and providing suggestions for plot, characters, and dialogue. Features file upload support, a chatbot assistant, and a responsive neon-themed UI.</p>
@@ -1026,7 +1160,7 @@
                 "AI Innovator & MERN Stack Developer",
                 "Building Tomorrow’s AI & Web Solutions",
                 "Transforming Data into Insights",
-                "Pioneering AI & MERN for a Better Future"
+                "Pioneering AI for a Better Future"
             ];
 
             let currentPhraseIndex = 0;
@@ -1113,7 +1247,7 @@
 
             gsap.utils.toArray('.gsap-skill').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 80%' },
+                    scrollTrigger: { trigger: el, start: 'top 90%' },
                     rotationY: 360,
                     opacity: 0,
                     duration: 1,
@@ -1124,7 +1258,7 @@
 
             gsap.utils.toArray('.gsap-project-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 80%' },
+                    scrollTrigger: { trigger: el, start: 'top 90%' },
                     x: 200,
                     opacity: 0,
                     duration: 1.2,
@@ -1135,7 +1269,7 @@
 
             gsap.utils.toArray('.gsap-experience-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 85%' },
+                    scrollTrigger: { trigger: el, start: 'top 90%' },
                     scale: 0,
                     opacity: 0,
                     duration: 0.8,
@@ -1146,7 +1280,7 @@
 
             gsap.utils.toArray('.gsap-education-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 85%' },
+                    scrollTrigger: { trigger: el, start: 'top 90%' },
                     scale: 0,
                     opacity: 0,
                     duration: 0.8,
@@ -1157,7 +1291,7 @@
 
             gsap.utils.toArray('.gsap-contact-card').forEach((el, i) => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 85%' },
+                    scrollTrigger: { trigger: el, start: 'top 90%' },
                     y: 80,
                     opacity: 0,
                     duration: 0.8,
@@ -1168,7 +1302,7 @@
 
             gsap.utils.toArray('.gsap-section-title').forEach(el => {
                 gsap.from(el, {
-                    scrollTrigger: { trigger: el, start: 'top 85%' },
+                    scrollTrigger: { trigger: el, start: 'top 90%' },
                     x: -50,
                     opacity: 0,
                     duration: 0.8,
@@ -1179,7 +1313,7 @@
             const projectsContainer = document.getElementById('projectsContainer');
             const leftArrow = document.getElementById('projectLeftArrow');
             const rightArrow = document.getElementById('projectRightArrow');
-            const cardWidth = 300 + 24;
+            const cardWidth = window.innerWidth <= 480 ? 220 + 16 : window.innerWidth <= 768 ? 260 + 20 : 300 + 24;
             let currentScrollPosition = 0;
 
             function updateArrowState() {
@@ -1220,6 +1354,7 @@
                     projectsContainer.scrollLeft = currentScrollPosition;
                 }
             });
+            projectsContainer.scrollLeft = 0;
             updateArrowState();
 
             const chatbot = document.getElementById('chatbot');
