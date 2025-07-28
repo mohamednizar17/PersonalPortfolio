@@ -222,7 +222,6 @@
             margin-bottom: 1.5rem;
             position: relative;
             letter-spacing: 1.5px;
-            text-transform: uppercase;
             text-shadow: 0 0 5px var(--glow);
         }
 
@@ -255,11 +254,16 @@
         .gsap-hero-title {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap; /* Prevent wrapping */
             text-align: center;
             width: 100%;
-            gap: 0.2em;
-            margin-bottom: 1rem;
+            gap: 0.15em; /* Reduced gap for mobile */
+            font-size: 4rem; /* Base font size */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: var(--secondary);
+            text-shadow: 0 0 8px var(--glow);
+            white-space: nowrap; /* Ensure single line */
         }
 
         .name-letter {
@@ -740,6 +744,10 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 3rem; }
+            .gsap-hero-title { 
+                font-size: 3rem; /* Scale down for tablets */
+                gap: 0.1em;
+            }
             .hero h3 { font-size: 1.2rem; }
             .hero .about-text { font-size: 1rem; line-height: 1.6; }
             .nav-links { gap: 0.6rem; }
@@ -831,6 +839,11 @@
 
         @media (max-width: 480px) {
             .hero h1 { font-size: 2.2rem; }
+            .gsap-hero-title { 
+                font-size: 1.8rem; /* Further scale down for mobile */
+                gap: 0.05em; /* Minimize gap */
+                letter-spacing: 0.5px; /* Reduce letter spacing */
+            }
             .hero h3 { font-size: 1rem; }
             .hero .about-text { font-size: 0.9rem; line-height: 1.5; }
             .nav-links a { font-size: 0.9rem; }
@@ -926,6 +939,14 @@
                 font-size: 0.6rem; 
             }
         }
+
+        @media (max-width: 360px) {
+            .gsap-hero-title {
+                font-size: 1.5rem; /* Extra small screens */
+                gap: 0.03em;
+                letter-spacing: 0.3px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -961,10 +982,10 @@
     <section id="home" class="section hero">
         <div class="container">
             <h2 class="gsap-hero-title">
-                <span class="name-letter">M</span><span class="name-letter">o</span><span class="name-letter">h</span><span class="name-letter">a</span><span class="name-letter">m</span><span class="name-letter">e</span><span class="name-letter">d</span>
+                <span class="name-letter">M</span><span class="name-letter">O</span><span class="name-letter">H</span><span class="name-letter">A</span><span class="name-letter">M</span><span class="name-letter">E</span><span class="name-letter">D</span>
                 <span class="name-letter"> </span>
                 <span class="name-letter"> </span>
-                <span class="name-letter">N</span><span class="name-letter">i</span><span class="name-letter">z</span><span class="name-letter">a</span><span class="name-letter">r</span>
+                <span class="name-letter">N</span><span class="name-letter">I</span><span class="name-letter">Z</span><span class="name-letter">A</span><span class="name-letter">R</span>
                 <span class="name-letter"> </span>
                 <span class="name-letter">A</span>
                 <span class="name-letter"> </span>
@@ -1160,7 +1181,7 @@
                 "AI Innovator & MERN Stack Developer",
                 "Building Tomorrow’s AI & Web Solutions",
                 "Transforming Data into Insights",
-                "Pioneering AI for a Better Future"
+                "Pioneering AI & MERN for a Better Future"
             ];
 
             let currentPhraseIndex = 0;
